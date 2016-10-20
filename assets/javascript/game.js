@@ -57,9 +57,45 @@ function placeRandom(){
 
 
 	// statements to make click true and false so when clicked it has a value that is true
-	 $(".crystal").click(function){
-	 	if(sumPoints<randomNumber)
-	 }
+	 	$(".crystal").click(function){
+	 	if(sumPoints<randomNumber){
+	 		if($(this).hasClass("crystal1")){
+	 			sumPoints += randomCrystal[0];
+	 		}
+	 		else if ($(this).hasClass("crystal2")){
+	 			sumPoints += randomCrystal[1];
+
+	 		}
+
+	 		else if($(this).hasClass("crystal3")){
+	 			sumPoints += randomCrystal[2];
+	 		}
+	 		else if($(this).hasClass("crystal4")){
+	 			sumPoints += randomCrystal[3];
+	 		}
+	 		$("#yourScores").html(sumPoints);
+	 	}
+	 	else{
+	 		gemScores();
+	 		placeRandom();
+	 		assigncrystalVal();
+	 	}
+
+	});
+
+
+	function gemScores(){
+		if(sumPoints === randomNumber){
+			win++;
+		}else if(sumPoints>randomNumber)
+			lose++;
+	}
+
+	sumPoints = 0;
+	$("#win").html(win);
+	$("loss").html(loss);
+	$("#score").html(sumPoints);
+}
 
 
 
@@ -98,4 +134,4 @@ function placeRandom(){
 
 
 
-})
+});
