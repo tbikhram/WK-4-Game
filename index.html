@@ -3,67 +3,73 @@
 <head>
 <meta charset="utf-8">
 	<title>GEMS</title>
-	
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">	
 <!-- Added link to the jQuery Library -->
-<script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous">
+	
+</script>
+
+
 
 <!-- Added a link to Bootstrap-->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">-->
 </head>
 <body>
-<div class="hud">
-    Score: <span id="score" class="score">0</span>
-  </div>
 
-<div id="container">
- <div class="row">
+
 
  	<!-- panel controllers-->
 
- 	<div class="col-lg-4">
- 	 <div class="panel panel-default">
+ 
+ 	
 	  <h1 class="title"> Crystals Collector</h1>
 	  </div>
-	  </div>
-   <div class="panel panel-default">
-	 <div class="col-lg-6">
-	  <p class="text"> You will be given a random number at the start of the game</p>
-		<br>
-
-		<p class="text"> There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.
-		</p>
-		<br>
-		<p class="text"> You win the game by aking your total score to random number, you lose the game if your total scores goes abouve the random number.</p>
-		<br>
-		<p class="text"> The value of each crystal is hidden from you until you click on it</p>
-		<br>
-		<p class="text"> Each time when the game starts, the game will change the values of each crystal</p>
-
-	 </div>
- </div>
+	
 	
 
- 	 <div class="col-lg-4">
+ 	
  	 
-	  
-	 	<div class="numb">Random Number</div>
+	  <h2></h2>
+	 	<div class="showNumber">rad</div>
 	 	
 
 
+
 	</div>
-	</div>
 
-	<div>Win:</div>
-	<div>Losses:</div>
+	<div id="win">Win:</div>
+	<div id="lose">Losses:</div>
 
-
- 	 <div class="col-lg-12">
+<div class="hud">
+    Score: <span id="score" class="score">0</span>
+  </div>
+ 	 
  	 
 	  <div class="images">
 	 	<div class="gem"></div>
 	 	
-	 	<div id="gem1" class="btn gem" value=1> <!-- replace with divs-->
-	 	<h1>Gem1</h1></div>
+	 	<div>
+	 	<img class="diaMonds1" src="https://2.bp.blogspot.com/-4ct9LdG9U1I/VxSZyrCm1VI/AAAAAAAADCo/n5J3cuOoLX03hWm5a-GQ6voUsIZ4Fa5wACKgB/s1600/gem.png" data-id="gem1" width="200px" height="200px" />
+		
+		<img class="diaMonds2" src="https://2.bp.blogspot.com/-4ct9LdG9U1I/VxSZyrCm1VI/AAAAAAAADCo/n5J3cuOoLX03hWm5a-GQ6voUsIZ4Fa5wACKgB/s1600/gem.png" data-id="gem1" width="200px" height="200px" />
+		
+		<img class="diaMonds3" src="https://2.bp.blogspot.com/-4ct9LdG9U1I/VxSZyrCm1VI/AAAAAAAADCo/n5J3cuOoLX03hWm5a-GQ6voUsIZ4Fa5wACKgB/s1600/gem.png" data-id="gem1" width="200px" height="200px" />
+		
+		<img class="diaMonds4" src="https://2.bp.blogspot.com/-4ct9LdG9U1I/VxSZyrCm1VI/AAAAAAAADCo/n5J3cuOoLX03hWm5a-GQ6voUsIZ4Fa5wACKgB/s1600/gem.png" data-id="gem1" width="200px" height="200px" />
+		
+
+
+		
+
+
+
+
+
+
+
+
+		<!--<div id="gem1" class="btn gem" class="hideDivs"> replace with divs-->	
+	 	<!--<h1>Gem1</h1></div>
 	 	
 	 	<div id="gem1" class="btn gem" value=5>
 	 	<h1>Gem2</h1></div>
@@ -78,12 +84,12 @@
 
 	</div>
 	</div>
-	</div>
+	</div>-->
 
 
  	 <div class="col-lg-4">
  	 
-	 	<div class="text">
+	 	<div class="yourScore">
 	 	<p>Your total score is:</p> 
 
 	</div>
@@ -106,17 +112,7 @@
   
 	
 
-
-
-	<script>
-
-		
-
-
-
-
-	</script>
-
+<script type="text/javascript" src="assets/javascript/game.js"></script>
 
 
 
