@@ -1,6 +1,6 @@
 $ (document).ready(function(){
 // create the variables of the game, this is what the functions will do
-var randomNumber = 0;
+var randomNumber;
 var Win= 0;
 var Loss=0;
 var sumPoints=0;
@@ -52,12 +52,12 @@ function placeRandom(){
 	 $("#randomNumber").html(randomNumber);
 	 $("gemScores").html(sumPoints);
 	 $("#Win").html(Win);
-	 $("#Loss").html(loss);
+	 $("#Loss").html(Loss);
 
 
 
 	// statements to make click true and false so when clicked it has a value that is true
-	 	$(".crystal").click(function){
+	 $(".crystal").click(function(){
 	 	if(sumPoints<randomNumber){
 	 		if($(this).hasClass("crystal1")){
 	 			sumPoints += randomCrystal[0];
@@ -79,7 +79,7 @@ function placeRandom(){
 	 		gemScores();
 	 		placeRandom();
 	 		assigncrystalVal();
-	 	}
+	 		}
 
 	});
 
@@ -87,15 +87,17 @@ function placeRandom(){
 	function gemScores(){
 		if(sumPoints === randomNumber){
 			win++;
-		}else if(sumPoints>randomNumber)
+		}else if(sumPoints>randomNumber){
 			lose++;
-	}
+		}
+	
 
 	sumPoints = 0;
 	$("#win").html(win);
 	$("loss").html(loss);
 	$("#score").html(sumPoints);
 }
+});
 
 
 
@@ -134,4 +136,4 @@ function placeRandom(){
 
 
 
-});
+
